@@ -1,0 +1,21 @@
+#ifndef DEMOMODULE_DEMOMODULE_H
+#define DEMOMODULE_DEMOMODULE_H
+
+#include <linux/types.h>
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Константы
+#define MAX_ITEMS 10
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Типы
+//
+struct buffer_item {
+  size_t sz;
+  char* buf;
+};
+
+
+#endif //DEMOMODULE_DEMOMODULE_H

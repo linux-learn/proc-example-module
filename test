@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "hello 1" > /proc/demomodule
 echo "hello 2" > /proc/demomodule
 echo "hello 3" > /proc/demomodule

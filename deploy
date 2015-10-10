@@ -1,0 +1,14 @@
+#!/bin/bash
+
+MODNAME=`basename "$PWD"`
+
+scp -r -P 3022 ./* "root@127.0.0.1:/usr/src/modules/$MODNAME"
+
+ssh -p 3022 root@127.0.0.1 << CMD
+	cd "/usr/src/modules/$MODNAME"
+	make
+	rmmod "$MODNAME"
+	insmod "$MODNAME.ko"
+	sh test
+	echo "Done!"
+CMD
